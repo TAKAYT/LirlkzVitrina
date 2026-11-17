@@ -1,0 +1,212 @@
+/* Единое обучение для ПК и мобильных: плавный автоскролл, подсветка и закрытие по крестику */
+(function () {
+  "use strict";
+
+  const C = window.TakaConfig;
+
+  const DESKTOP_STEPS = [
+    {
+      selector: "#heroHeader",
+      title: "Быстрый доступ ко всем каналам",
+      text: "Ссылки на Boosty, 4 последних видео YouTube, новости Telegram за неделю, личный чат @Lirtkz и кнопка заказа озвучки — всё в шапке."
+    },
+    {
+      selector: "#filtersPanel",
+      title: "Мультивыбор жанров и теги",
+      text: "Выбирайте сразу несколько жанров галочками, ищите по названию или откройте выдвижную панель тегов."
+    },
+    {
+      selector: "#releasesSection",
+      title: "Новинки недели и месяца",
+      text: "Все свежие релизы: вкладка «Новинки месяца» показывает полные диапазоны с 1-й главы и обложки тайтлов."
+    },
+    {
+      selector: ".catalog-grid",
+      title: "Удобные карточки тайтлов",
+      text: "Зелёная кнопка сразу открывает бесплатные выпуски, а цветные рамки показывают статус (Романтика, Завершён, Заморожен)."
+    },
+    {
+      selector: "#tiersSection",
+      title: "Единая подписка Boosty",
+      text: "Один уровень подписки открывает сразу всю базу тайтлов, закрытые главы и ранние серии без ограничений."
+    }
+  ];
+
+  const MOBILE_STEPS = [
+    {
+      selector: "#mobileFilterBar",
+      title: "Быстрый поиск и фильтры",
+      text: "Находите манхву по названию или открывайте шторку фильтров с мультивыбором жанров и статусов."
+    },
+    {
+      selector: "#mobileQuickChips",
+      title: "Теги и случайная подборка",
+      text: "Нажмите «Теги», чтобы открыть выдвижной ползунок, или «Случайные 4» для быстрого выбора."
+    },
+    {
+      selector: "#releasesSection",
+      title: "Свежие выпуски",
+      text: "Листайте карусель свайпом. Вкладка «Новинки месяца» показывает все новые тайтлы от 1-й до последней главы."
+    },
+    {
+      selector: ".catalog-grid",
+      title: "Бесплатные главы и статусы",
+      text: "Зелёная кнопка сразу ведёт к бесплатным главам. Рамки помогают сразу отличить романтику, завершённые и замороженные проекты."
+    },
+    {
+      selector: "#tiersSection",
+      title: "Единая подписка Boosty",
+      text: "Единый уровень подписки открывает все закрытые главы и новые серии раньше выхода на YouTube."
+    }
+  ];
+
+  let activeSteps = DESKTOP_STEPS;
+  let stepIdx = 0;
+  let rafId = null;
+
+  function isMobileViewport() {
+    return window.innerWidth <= 768;
+  }
+
+  function startTour(closeMobileSheetFn) {
+    if (typeof closeMobileSheetFn === "function") closeMobileSheetFn();
+    activeSteps = isMobileViewport() ? MOBILE_STEPS : DESKTOP_STEPS;
+    stepIdx = 0;
+    renderStep();
+  }
+
+  function updateSpotlightPosition() {
+    const overlay = document.getElementById("tourOverlay");
+    const spotlight = document.getElementById("tourSpotlight");
+    const tooltip = document.getElementById("tourTooltip");
+    if (!overlay || overlay.style.display === "none" || !spotlight || !tooltip) return;
+
+    const step = activeSteps[stepIdx];
+    if (!step) return;
+    const target = document.querySelector(step.selector);
+    if (!target) return;
+
+    const r = target.getBoundingClientRect();
+    const pad = isMobileViewport() ? 4 : 6;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    const top = Math.max(8, r.top - pad);
+    const left = Math.max(8, r.left - pad);
+    const width = Math.min(vw - 16, Math.max(40, r.width + pad * 2));
+    const height = Math.min(vh - 16, Math.max(40, r.height + pad * 2));
+
+    spotlight.style.top = `${top}px`;
+    spotlight.style.left = `${left}px`;
+    spotlight.style.width = `${width}px`;
+    spotlight.style.height = `${height}px`;
+
+    const ttHeight = tooltip.offsetHeight || 175;
+    if (isMobileViewport()) {
+      const spaceBelow = vh - (top + height);
+      let ttTop = spaceBelow >= ttHeight + 20 ? (top + height + 12) : Math.max(12, top - ttHeight - 12);
+      if (ttTop + ttHeight > vh - 12) ttTop = vh - ttHeight - 12;
+      tooltip.style.top = `${Math.max(12, ttTop)}px`;
+    } else {
+      const ttWidth = 320;
+      let ttTop = top + height + 14;
+      if (ttTop + ttHeight > vh - 16) {
+        ttTop = Math.max(16, top - ttHeight - 14);
+      }
+      let ttLeft = left;
+      if (r.width < 120) ttLeft = left + width + 16;
+      ttLeft = Math.min(vw - ttWidth - 16, Math.max(16, ttLeft));
+      tooltip.style.top = `${ttTop}px`;
+      tooltip.style.left = `${ttLeft}px`;
+    }
+  }
+
+  function trackSmoothScroll() {
+    cancelAnimationFrame(rafId);
+    const start = performance.now();
+    function frame(now) {
+      updateSpotlightPosition();
+      if (now - start < 720) {
+        rafId = requestAnimationFrame(frame);
+      }
+    }
+    rafId = requestAnimationFrame(frame);
+  }
+
+  function renderStep() {
+    const overlay = document.getElementById("tourOverlay");
+    if (!overlay) return;
+    if (stepIdx >= activeSteps.length) {
+      endTour();
+      return;
+    }
+
+    const step = activeSteps[stepIdx];
+    const target = document.querySelector(step.selector);
+    if (!target || target.offsetParent === null) {
+      stepIdx++;
+      renderStep();
+      return;
+    }
+
+    overlay.style.display = "block";
+    C.setText("tourStepBadge", `Шаг ${stepIdx + 1} из ${activeSteps.length}`);
+    C.setText("tourTitle", step.title);
+    C.setText("tourText", step.text);
+    C.setText("tourNextBtn", stepIdx === activeSteps.length - 1 ? "Готово" : "Далее");
+
+    const prevBtn = document.getElementById("tourPrevBtn");
+    if (prevBtn) prevBtn.style.display = stepIdx > 0 ? "inline-flex" : "none";
+
+    const rect = target.getBoundingClientRect();
+    const targetCenter = window.scrollY + rect.top - Math.max(60, (window.innerHeight - rect.height) / 2);
+    window.scrollTo({
+      top: Math.max(0, targetCenter),
+      behavior: "smooth"
+    });
+
+    updateSpotlightPosition();
+    trackSmoothScroll();
+  }
+
+  function endTour() {
+    cancelAnimationFrame(rafId);
+    const overlay = document.getElementById("tourOverlay");
+    if (overlay) overlay.style.display = "none";
+    try { localStorage.setItem(C.TOUR_DONE_KEY, "1"); } catch (_) {}
+  }
+
+  function bindTourEvents() {
+    document.getElementById("tourSkipBtn")?.addEventListener("click", endTour);
+    document.getElementById("tourCloseXBtn")?.addEventListener("click", endTour);
+    document.getElementById("tourPrevBtn")?.addEventListener("click", () => {
+      if (stepIdx > 0) { stepIdx--; renderStep(); }
+    });
+    document.getElementById("tourNextBtn")?.addEventListener("click", () => {
+      stepIdx++;
+      renderStep();
+    });
+
+    window.addEventListener("resize", () => {
+      const overlay = document.getElementById("tourOverlay");
+      if (overlay && overlay.style.display !== "none") {
+        activeSteps = isMobileViewport() ? MOBILE_STEPS : DESKTOP_STEPS;
+        if (stepIdx >= activeSteps.length) stepIdx = 0;
+        updateSpotlightPosition();
+      }
+    });
+
+    window.addEventListener("scroll", () => {
+      const overlay = document.getElementById("tourOverlay");
+      if (overlay && overlay.style.display !== "none") {
+        updateSpotlightPosition();
+      }
+    }, { passive: true });
+  }
+
+  window.TakaTour = {
+    startTour,
+    endTour,
+    bindTourEvents
+  };
+})();
