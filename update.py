@@ -25,14 +25,10 @@ _METEO_LAT = 55.7558
 _METEO_LON = 37.6173
 
 BOOSTY_API_HEADERS = {
-    'User-Agent': 'LirlkzCatalogSyncBot/5.0 (+https://boosty.to/wynin; API-Sync; Bot; NoTrack)',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
     'Accept': 'application/json, text/plain, */*',
     'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
-    'X-Requested-With': 'XMLHttpRequest',
-    'DNT': '1',
-    'Sec-GPC': '1',
-    'Purpose': 'prefetch',
-    'Sec-Purpose': 'prefetch'
+    'Referer': 'https://boosty.to/wynin'
 }
 
 EXTERNAL_HEADERS = {
@@ -44,7 +40,7 @@ EXTERNAL_HEADERS = {
 TIER_1_ID = "3908979"
 
 TIER_DEFAULTS = {
-    1: {"id": TIER_1_ID, "name": "Полный доступ ко всем тайтлам", "price": 200}
+    1: {"id": TIER_1_ID, "name": "Полный доступ ко всем тайтлам", "price": 100}
 }
 
 SUB_LINKS = {
@@ -181,13 +177,13 @@ def fetch_text_external(url, timeout=16):
         return response.read().decode('utf-8', errors='ignore')
 
 
-def download_media_to_cache(url, filename, max_width=0, subdir="", crop_yt_bars=False):
+def download_media_to_cache(url, filename, max_width=0, subdir="", crop_yt_bars=False, force=False):
     if not url or not filename:
         return ""
     target_dir = os.path.join(MEDIA_CACHE_DIR, subdir) if subdir else MEDIA_CACHE_DIR
     os.makedirs(target_dir, exist_ok=True)
     local_path = os.path.join(target_dir, filename).replace('\\', '/')
-    if os.path.exists(local_path) and os.path.getsize(local_path) > 1024:
+    if not force and os.path.exists(local_path) and os.path.getsize(local_path) > 1024:
         return local_path
     try:
         req = urllib.request.Request(url, headers={
@@ -208,7 +204,11 @@ def download_media_to_cache(url, filename, max_width=0, subdir="", crop_yt_bars=
                         if max_width > 0 and im.width > max_width:
                             ratio = max_width / float(im.width)
                             im = im.resize((max_width, max(1, int(im.height * ratio))), Image.LANCZOS)
-                        im.save(local_path, format='JPEG', quality=78, optimize=True, progressive=True)
+                        fmt = 'PNG' if filename.lower().endswith('.png') else 'JPEG'
+                        if fmt == 'PNG':
+                            im.save(local_path, format='PNG', optimize=True)
+                        else:
+                            im.save(local_path, format='JPEG', quality=78, optimize=True, progressive=True)
                         return local_path
                     except Exception:
                         pass
@@ -544,49 +544,11 @@ def fetch_outdoor_weather_state():
     m = now_msk.month
     season = "winter" if m in (12, 1, 2) else ("spring" if m in (3, 4, 5) else ("summer" if m in (6, 7, 8) else "autumn"))
     is_night = (now_msk.hour >= 20 or now_msk.hour < 6)
-    weather_type = "fireflies" if is_night else "clear"
-    weather_code = 0
-
-    try:
-        url = (
-            f"https://api.open-meteo.com/v1/forecast"
-            f"?latitude={_METEO_LAT}&longitude={_METEO_LON}"
-            f"&current=weather_code,is_day,precipitation,rain,showers,snowfall"
-            f"&timezone=Europe%2FMoscow"
-        )
-        data = fetch_json(url, timeout=6)
-        cur = (data or {}).get("current") or {}
-        weather_code = int(cur.get("weather_code") or 0)
-        if "is_day" in cur:
-            is_night = (int(cur.get("is_day") or 0) == 0)
-
-        is_rain = (
-            float(cur.get("rain") or 0) > 0
-            or float(cur.get("showers") or 0) > 0
-            or (51 <= weather_code <= 67)
-            or (80 <= weather_code <= 82)
-            or (95 <= weather_code <= 99)
-        )
-        is_snow = (
-            float(cur.get("snowfall") or 0) > 0
-            or (71 <= weather_code <= 77)
-            or (85 <= weather_code <= 86)
-        )
-
-        if is_snow:
-            weather_type = "snow" if season == "winter" else "rain"
-        elif is_rain:
-            weather_type = "rain"
-        else:
-            weather_type = "fireflies" if is_night else "clear"
-    except Exception:
-        pass
-
     return {
         "season": season,
         "is_night": is_night,
-        "weather": weather_type,
-        "weather_code": weather_code,
+        "weather": "clear",
+        "weather_code": 0,
         "updated_at": now_msk.strftime("%Y-%m-%dT%H:%M:%S+03:00")
     }
 
@@ -612,14 +574,14 @@ def fetch_boosty_subscription_levels():
             lid = str(chosen.get('id') or TIER_1_ID).strip()
             api_price = int(chosen.get('price') or 0)
             old_price = int(chosen.get('oldPrice') or 0)
-            safe_price = api_price if api_price >= 50 else default_cfg["price"]
+            safe_price = api_price if api_price >= 30 else default_cfg["price"]
             raw_name = str(chosen.get('name') or '').strip()
             tiers.append({
                 "id": lid,
                 "tier": 1,
                 "name": raw_name or default_cfg["name"],
                 "price": safe_price,
-                "old_price": old_price if old_price >= 50 else 0,
+                "old_price": old_price if old_price >= 30 else 0,
                 "url": f"https://boosty.to/{BLOG_NAME}/purchase/{lid}?ssource=DIRECT&share=subscription_link"
             })
     except Exception:
@@ -635,6 +597,32 @@ def fetch_boosty_subscription_levels():
             "url": SUB_LINKS[1]
         }]
     return tiers
+
+
+def fetch_channel_avatar_fallback():
+    # 1. Пробуем вытащить аватарку из публичной страницы Telegram-канала @LirlkzManga
+    for tg_url in [f"https://t.me/{TG_CHANNEL_USERNAME}", f"https://t.me/s/{TG_CHANNEL_USERNAME}"]:
+        try:
+            html_str = fetch_text_external(tg_url, timeout=10)
+            m = re.search(r'<img[^>]+class="tgme_page_photo_image"[^>]+src="([^"]+)"', html_str)
+            if m and m.group(1).startswith("http"):
+                return m.group(1)
+            og = re.search(r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"', html_str)
+            if og and og.group(1).startswith("http") and "telegram.org/img" not in og.group(1):
+                return og.group(1)
+        except Exception:
+            pass
+
+    # 2. Пробуем вытащить аватарку с YouTube-канала
+    try:
+        yt_html = fetch_text_external(f"https://www.youtube.com/channel/{YT_CHANNEL_ID}", timeout=10)
+        og = re.search(r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"', yt_html)
+        if og and og.group(1).startswith("http"):
+            return og.group(1)
+    except Exception:
+        pass
+
+    return f"https://unavatar.io/telegram/{TG_CHANNEL_USERNAME}"
 
 
 def fetch_latest_telegram_channel_news(limit=8, max_days=7):
@@ -1067,12 +1055,18 @@ def get_blog_stats_and_goals(catalog_items=None):
         except Exception:
             pass
 
+    avatar_remote = ""
     try:
         blog_data = fetch_json(f'https://api.boosty.to/v1/blog/{BLOG_NAME}', is_boosty=True)
         if isinstance(blog_data, dict):
-            if blog_data.get('avatarUrl'):
-                stats['avatar'] = blog_data['avatarUrl']
-                download_media_to_cache(blog_data['avatarUrl'], 'avatar.png', max_width=200)
+            owner_obj = blog_data.get('owner') if isinstance(blog_data.get('owner'), dict) else {}
+            user_obj = blog_data.get('user') if isinstance(blog_data.get('user'), dict) else {}
+            avatar_remote = (
+                blog_data.get('avatarUrl')
+                or owner_obj.get('avatarUrl')
+                or user_obj.get('avatarUrl')
+                or ""
+            )
             count_obj = blog_data.get('count', {})
             if isinstance(count_obj, dict):
                 if count_obj.get('subscribers') is not None:
@@ -1081,6 +1075,13 @@ def get_blog_stats_and_goals(catalog_items=None):
                     stats['posts'] = int(count_obj['posts'])
     except Exception:
         pass
+
+    if not avatar_remote:
+        avatar_remote = fetch_channel_avatar_fallback()
+
+    if avatar_remote:
+        cached_av = download_media_to_cache(avatar_remote, 'avatar.png', max_width=200, force=True)
+        stats['avatar'] = cached_av or avatar_remote
 
     tiers = fetch_boosty_subscription_levels()
     if tiers:
@@ -1219,7 +1220,6 @@ def extract_all_chapter_ranges(text):
 
     candidates = []
 
-    # 1. Перечисление глав через запятую: "Главы 1,2,3,4,5,6,7,8,9,10" или "11,12,13,14,15"
     for m in re.finditer(r'(?:глав[аы]?|гл\.?|части?|сери[яий])?\s*(\d+(?:\s*,\s*\d+)+)', cleaned, re.IGNORECASE):
         raw_list = m.group(1)
         nums = [int(x) for x in re.findall(r'\d+', raw_list) if 0 < int(x) < 2500]
@@ -1228,7 +1228,6 @@ def extract_all_chapter_ranges(text):
             if 0 < s <= e < 2500 and (e - s) < 500:
                 candidates.append((f"{s}-{e} гл." if s != e else f"{e} гл.", s, e))
 
-    # 2. Классические диапазоны через дефис: "1-10 глав", "Главы 1-10"
     for m in re.finditer(r'\b(\d+)\s*[-—–~]\s*(\d+)\s*(?:глав[аы]?|гл\.?|ч\.?|част[ьи]|сери[яий])\b', cleaned, re.IGNORECASE):
         s, e = int(m.group(1)), int(m.group(2))
         if 0 < s <= e < 2500:
@@ -1239,7 +1238,6 @@ def extract_all_chapter_ranges(text):
         if 0 < s <= e < 2500:
             candidates.append((f"{s}-{e} гл.", s, e))
 
-    # 3. Диапазон в скобках или в любом месте названия: "[1-10]", "Название 1-10. Манга с озвучкой"
     for m in re.finditer(r'[\[\(]\s*(\d+)\s*[-—–~]\s*(\d+)\s*(?:глав[аы]?|гл\.?|все\s*главы|все)?\s*[\]\)]?', cleaned, re.IGNORECASE):
         s, e = int(m.group(1)), int(m.group(2))
         if 0 < s <= e < 2500 and not (s == 82 and e == 8):
@@ -1250,13 +1248,11 @@ def extract_all_chapter_ranges(text):
         if 0 < s < e < 2500 and (e - s) <= 300 and not (s == 82 and e == 8):
             candidates.append((f"{s}-{e} гл.", s, e))
 
-    # 4. "до 10 главы"
     for m in re.finditer(r'\b(?:до|по)\s*(\d+)\s*(?:-?ю|-?й)?\s*(?:глав[уы]?|гл\.?)\b', cleaned, re.IGNORECASE):
         e = int(m.group(1))
         if 0 < e < 2500:
             candidates.append((f"1-{e} гл.", 1, e))
 
-    # 5. Одиночная глава: "10 глава", "Глава 10"
     for m in re.finditer(r'\b(\d+)\s*(?:глав[аы]?|гл\.?|сери[яий])\b', cleaned, re.IGNORECASE):
         e = int(m.group(1))
         if 0 < e < 2500:
@@ -1429,7 +1425,6 @@ def match_posts_for_bundle(bundle, all_blog_posts, posts_by_id, global_first_pos
         if is_exact_title_match(norm_title, aliases, p):
             matched_map[pid] = p
 
-    # Всегда догружаем посты бандла напрямую через API бандла, если постов найдено меньше ожидаемого
     if len(matched_map) == 0 or len(matched_map) < max(expected_count, 2):
         try:
             raw = fetch_json(
@@ -1654,7 +1649,6 @@ def analyze_posts_stats(posts_list, fallback_ts, eng_metric_tag=""):
         for fp in free_posts_clean
     ]
 
-    # Если в бандле и постах главы явно не подписаны, считаем минимум по числу выпусков
     if max_chapter_found == 0 and all_posts_clean:
         max_chapter_found = max(len(all_chapters_set), len(all_posts_clean))
         has_1_to_n_start = True
@@ -1767,7 +1761,6 @@ def process_data(extra_cfg, overrides_dict, special_cfg):
             item, all_blog_posts, posts_by_id, global_first_post_id, claimed_post_ids
         )
 
-        # Если у самого бандла нет обложки, подтягиваем её из постов бандла
         if not remote_cover and matched_posts:
             for mp in matched_posts:
                 img_c = extract_high_res_cover_from_post(mp)
@@ -1887,7 +1880,6 @@ def process_data(extra_cfg, overrides_dict, special_cfg):
             "monthly_searches": monthly_searches_count
         })
 
-    # Автоматическое обнаружение тегов-тайтлов из постов, которые ещё не попали в бандлы
     auto_discovered_tags = list(extra_cfg.get("custom_tags", []))
     known_tag_ids = {str(x.get("tag_id", "")).strip() for x in auto_discovered_tags if x.get("tag_id")}
 
