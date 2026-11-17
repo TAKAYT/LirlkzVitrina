@@ -1,5 +1,5 @@
 {
-  "avatar": "",
+  "avatar": "media_cache/avatar.png",
   "subscribers": 65,
   "posts": 40,
   "total_free_chapters": 290,
@@ -11,7 +11,7 @@
       "id": "3908979",
       "tier": 1,
       "name": "❤️‍🔥Любитель озвучки❤️‍🔥",
-      "price": 200,
+      "price": 100,
       "old_price": 0,
       "url": "https://boosty.to/wynin/purchase/3908979?ssource=DIRECT&share=subscription_link"
     }
@@ -24,14 +24,14 @@
       "description": "На новый микрофон 🎙️ для озвучки 🗣"
     },
     {
-      "current": 6,
+      "current": 7,
       "target": 6,
       "type": "money",
       "description": "продолжение маньхуа:После разрыва отношений все мои призванные звери стали темными существами"
     },
     {
       "current": 0,
-      "target": 45,
+      "target": 46,
       "type": "money",
       "description": "На хорошее проведение выходных "
     },
@@ -49,6 +49,14 @@
     }
   ],
   "tg_news": [
+    {
+      "id": "825",
+      "date": "17.11.2026",
+      "short_text": "Так всем добрый вечер что могу сказать теперь для вашего удобства при поддержке ТАКИ мы сделали сайт где вы сможете спокойно пр...",
+      "full_text": "Так всем добрый вечер что могу сказать теперь для вашего удобства при поддержке ТАКИ мы сделали сайт где вы сможете спокойно просматривать каталог проектов [https://takayt.github.io/LirlkzVitrina/]",
+      "image": "media_cache/tg_825.jpg",
+      "link": "https://t.me/LirlkzManga/825"
+    },
     {
       "id": "824",
       "date": "14.11.2026",
@@ -104,14 +112,6 @@
       "full_text": "Если кто спросит какой тайтл твой нелюбимый то мой ответ вот это я на это пакость потратил день и я озвучил только две главы я сорвал голос и нервы",
       "image": "media_cache/tg_812.jpg",
       "link": "https://t.me/LirlkzManga/812"
-    },
-    {
-      "id": "811",
-      "date": "11.11.2026",
-      "short_text": "Сегодня ролика не будет так как я весь день не могу записаться озвучку из-за горла сегодня весь день оно болит и говорить больно",
-      "full_text": "Сегодня ролика не будет так как я весь день не могу записаться озвучку из-за горла сегодня весь день оно болит и говорить больно",
-      "image": "",
-      "link": "https://t.me/LirlkzManga/811"
     }
   ],
   "yt_videos": [
@@ -154,9 +154,9 @@
   ],
   "ambient_state": {
     "season": "autumn",
-    "is_night": true,
-    "weather": "fireflies",
-    "weather_code": 3,
-    "updated_at": "2026-11-17T16:41:40+03:00"
+    "is_night": false,
+    "weather": "clear",
+    "weather_code": 0,
+    "updated_at": "2026-11-17T17:17:56+03:00"
   }
 }
