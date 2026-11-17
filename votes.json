@@ -4,6 +4,55 @@
   "namespace": "lirlkz_vitrina_2026_11",
   "total_votes_cast": 0,
   "total_monthly_searches": 0,
-  "items": {},
-  "months_archive": {}
+  "items": {
+    "init_evolyuciya_nekromanta": {
+      "title": "Эволюция некроманта: Мой аватар — скелет",
+      "metric_tag": "evolyuciya_nekromanta_moj_avatar_skelet",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "14/11/2026"
+    },
+    "init_voshozhdenie_nekromanta": {
+      "title": "Восхождение безграничного некроманта",
+      "metric_tag": "voshozhdenie_bezgranichnogo_nekromanta",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "12/11/2026"
+    }
+  },
+  "months_archive": {
+    "2026_11": {
+      "updated_at": "2026-11-17T12:00:00Z",
+      "total_votes_cast": 0,
+      "total_monthly_searches": 0,
+      "items": {
+        "init_evolyuciya_nekromanta": {
+          "title": "Эволюция некроманта: Мой аватар — скелет",
+          "metric_tag": "evolyuciya_nekromanta_moj_avatar_skelet",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "14/11/2026"
+        },
+        "init_voshozhdenie_nekromanta": {
+          "title": "Восхождение безграничного некроманта",
+          "metric_tag": "voshozhdenie_bezgranichnogo_nekromanta",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "12/11/2026"
+        }
+      }
+    }
+  }
 }
