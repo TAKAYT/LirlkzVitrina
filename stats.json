@@ -1,0 +1,29 @@
+{
+  "avatar": "",
+  "subscribers": 0,
+  "posts": 0,
+  "total_free_chapters": 0,
+  "total_paid_chapters": 0,
+  "total_voiced_chapters": 0,
+  "total_internet_chapters": 0,
+  "tiers": [
+    {
+      "id": "3908979",
+      "tier": 1,
+      "name": "Полный доступ ко всем тайтлам",
+      "price": 200,
+      "old_price": 0,
+      "url": "https://boosty.to/wynin/purchase/3908979?ssource=DIRECT&share=subscription_link"
+    }
+  ],
+  "goals": [],
+  "tg_news": [],
+  "yt_videos": [],
+  "ambient_state": {
+    "season": "autumn",
+    "is_night": false,
+    "weather": "clear",
+    "weather_code": 0,
+    "updated_at": "2026-11-17T15:00:00+03:00"
+  }
+}
