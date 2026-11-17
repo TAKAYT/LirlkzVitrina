@@ -130,18 +130,6 @@
     document.documentElement.setAttribute("data-theme", "dark");
   }
 
-  /* -------------------- ONLINE COUNTER (SUBTLE FOOTER) -------------------- */
-  function initOnlineCounter() {
-    function updateCount() {
-      const hour = new Date().getHours();
-      const base = (hour >= 17 && hour <= 23) ? 19 : (hour >= 10 && hour < 17) ? 13 : 7;
-      const jitter = Math.floor(Math.random() * 5) - 2;
-      C.setText("onlineCountVal", Math.max(4, base + jitter));
-    }
-    updateCount();
-    setInterval(updateCount, 30000);
-  }
-
   /* -------------------- PROMO CONVERSION POPUP -------------------- */
   function initPromoConversion() {
     try {
@@ -217,13 +205,22 @@
     }
   }
 
-  /* -------------------- AVATAR -------------------- */
+  /* -------------------- AVATAR (С АВТОМАТИЧЕСКИМ РЕЗЕРВОМ ИЗ TG И YOUTUBE) -------------------- */
   function setupAvatar(avatarUrl) {
     const img = document.getElementById("heroAvatarImg");
     const fb = document.getElementById("heroAvatarFallback");
     if (!img || !fb) return;
 
-    const candidates = ["media_cache/avatar.png", "media_cache/avatar.jpg", avatarUrl, "avatar.png", "avatar.jpg"].filter(Boolean);
+    const candidates = [
+      avatarUrl,
+      "media_cache/avatar.png",
+      "media_cache/avatar.jpg",
+      "avatar.png",
+      "avatar.jpg",
+      "https://unavatar.io/telegram/LirlkzManga",
+      "https://unavatar.io/youtube/LirlkzManga"
+    ].filter(Boolean);
+
     let idx = 0;
     function tryNext() {
       if (idx >= candidates.length) {
@@ -231,6 +228,8 @@
         fb.style.display = "flex";
         return;
       }
+      img.style.display = "block";
+      fb.style.display = "none";
       img.src = candidates[idx++];
     }
     img.onerror = tryNext;
@@ -293,7 +292,7 @@
 
     const mainTierPrice = state.tiers[0]?.price || C.DEFAULT_TIERS[0].price;
     const rawPrice = Number(raw.price) || 0;
-    const price = rawPrice >= 50 ? rawPrice : mainTierPrice;
+    const price = rawPrice >= 30 ? rawPrice : mainTierPrice;
     const typeKey = state.typeOverrides[norm] || C.normalizeTypeKey(raw.content_type || raw.type);
 
     const isFrozen = Boolean(raw.is_frozen) || state.specialTitles.frozen_titles.includes(norm);
@@ -450,7 +449,7 @@
     if (!found) return;
 
     const apiPrice = Number(found.price) || 0;
-    const price = apiPrice >= 50 ? apiPrice : def.price;
+    const price = apiPrice >= 30 ? apiPrice : def.price;
     const oldPrice = Number(found.old_price || 0);
     const discount = oldPrice > price ? `-${Math.round((1 - price / oldPrice) * 100)}%` : "";
 
@@ -1117,7 +1116,6 @@
   }
 
   initTheme();
-  initOnlineCounter();
   checkGeoRestriction();
   loadSavedFilters();
   bindEvents();
