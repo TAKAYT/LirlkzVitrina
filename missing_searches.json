@@ -1,0 +1,12 @@
+{
+  "description": "Журнал поисковых запросов тайтлов, которых ещё нет в каталоге Boosty",
+  "updated_at": "2026-11-17T12:00:00Z",
+  "current_month": "2026_11",
+  "months": {
+    "2026_11": {
+      "total_missing_queries": 0,
+      "queries": {}
+    }
+  },
+  "already_added_to_boosty": []
+}
