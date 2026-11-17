@@ -1,11 +1,11 @@
 {
   "avatar": "media_cache/avatar.png",
   "subscribers": 65,
-  "posts": 40,
+  "posts": 41,
   "total_free_chapters": 290,
-  "total_paid_chapters": 63,
-  "total_voiced_chapters": 353,
-  "total_internet_chapters": 353,
+  "total_paid_chapters": 71,
+  "total_voiced_chapters": 361,
+  "total_internet_chapters": 361,
   "tiers": [
     {
       "id": "3908979",
@@ -49,6 +49,14 @@
     }
   ],
   "tg_news": [
+    {
+      "id": "826",
+      "date": "17.11.2026",
+      "short_text": "Завтра начну для вас выпускать продолжение проектов чтобы пополнять список YouTube, Boost, сайта",
+      "full_text": "Завтра начну для вас выпускать продолжение проектов чтобы пополнять список YouTube, Boost, сайта",
+      "image": "media_cache/tg_826.jpg",
+      "link": "https://t.me/LirlkzManga/826"
+    },
     {
       "id": "825",
       "date": "17.11.2026",
@@ -104,14 +112,6 @@
       "full_text": "Завтра на канале",
       "image": "media_cache/tg_814.jpg",
       "link": "https://t.me/LirlkzManga/814"
-    },
-    {
-      "id": "812",
-      "date": "11.11.2026",
-      "short_text": "Если кто спросит какой тайтл твой нелюбимый то мой ответ вот это я на это пакость потратил день и я озвучил только две главы я...",
-      "full_text": "Если кто спросит какой тайтл твой нелюбимый то мой ответ вот это я на это пакость потратил день и я озвучил только две главы я сорвал голос и нервы",
-      "image": "media_cache/tg_812.jpg",
-      "link": "https://t.me/LirlkzManga/812"
     }
   ],
   "yt_videos": [
@@ -154,9 +154,9 @@
   ],
   "ambient_state": {
     "season": "autumn",
-    "is_night": false,
+    "is_night": true,
     "weather": "clear",
     "weather_code": 0,
-    "updated_at": "2026-11-17T17:17:56+03:00"
+    "updated_at": "2026-11-18T02:14:40+03:00"
   }
 }

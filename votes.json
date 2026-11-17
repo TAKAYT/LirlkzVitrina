@@ -1,6 +1,6 @@
 {
   "month": "2026_11",
-  "updated_at": "2026-11-17T14:18:03Z",
+  "updated_at": "2026-11-17T23:14:44Z",
   "namespace": "lirlkz_vitrina_2026_11",
   "total_votes_cast": 0,
   "total_monthly_searches": 0,
@@ -185,6 +185,16 @@
       "tier_level": 1,
       "updated_at": "18/07/2026"
     },
+    "b785885f-111a-42e1-acf3-69178da98dee": {
+      "title": "Я регрессировал в 99-й раз",
+      "metric_tag": "ya_regressiroval_v_99_j_raz",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "17/11/2026"
+    },
     "ffc2eeb7-bcca-4262-91f4-be7319215c5c": {
       "title": "Поднятие уровня в одиночку",
       "metric_tag": "podnyatie_urovnya_v_odinochku",
@@ -268,7 +278,7 @@
   },
   "months_archive": {
     "2026_11": {
-      "updated_at": "2026-11-17T14:18:03Z",
+      "updated_at": "2026-11-17T23:14:44Z",
       "total_votes_cast": 0,
       "total_monthly_searches": 0,
       "items": {
@@ -451,6 +461,16 @@
           "rank": 0,
           "tier_level": 1,
           "updated_at": "18/07/2026"
+        },
+        "b785885f-111a-42e1-acf3-69178da98dee": {
+          "title": "Я регрессировал в 99-й раз",
+          "metric_tag": "ya_regressiroval_v_99_j_raz",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "17/11/2026"
         },
         "ffc2eeb7-bcca-4262-91f4-be7319215c5c": {
           "title": "Поднятие уровня в одиночку",
