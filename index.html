@@ -17,13 +17,6 @@
   <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
 </head>
 <body>
-  <div class="ambient-bg" aria-hidden="true">
-    <div class="ambient-orb ambient-orb-1"></div>
-    <div class="ambient-orb ambient-orb-2"></div>
-    <div class="ambient-kanji ambient-kanji-right">漫画・声優・物語</div>
-    <div class="ambient-kanji ambient-kanji-left">魂・力・空青</div>
-  </div>
-
   <div id="geoBlockScreen" class="geo-block-screen" style="display:none;">
     <div class="geo-block-card">
       <h2>Доступ ограничен</h2>
@@ -162,7 +155,7 @@
       <div class="access-tabs" id="accessTabs">
         <button type="button" class="access-tab active" data-access="all">Все тайтлы <span class="tab-badge" id="cntAll">0</span></button>
         <button type="button" class="access-tab" data-access="free">Бесплатные <span class="tab-badge" id="cntFree">0</span></button>
-        <button type="button" class="access-tab" data-access="tier1"><span id="tier1TabLabel">По подписке</span> <span class="tab-badge" id="cntTier1">0</span></button>
+        <button type="button" class="access-tab" data-access="tier1"><span id="tier1TabLabel">По подписке • 100 ₽</span> <span class="tab-badge" id="cntTier1">0</span></button>
       </div>
 
       <div class="controls-row">
@@ -258,7 +251,6 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 Lirlkz • Любительский фандаб-каталог</span>
-        <span class="online-counter" title="Активность на сайте"><span class="online-dot"></span>Онлайн: <strong id="onlineCountVal">—</strong></span>
         <span id="lastSyncText"></span>
       </div>
     </footer>
@@ -377,10 +369,10 @@
       <button type="button" class="modal-close" data-close-modal="promoModal" aria-label="Закрыть">✕</button>
       <div class="promo-badge" id="promoBadge">Рекомендация Lirlkz</div>
       <h2 class="modal-title-sm" id="promoTitle">Откройте все главы без ожидания</h2>
-      <p class="modal-text" id="promoDesc">Вы уже не первый раз заглядываете на витрину! Единая подписка открывает сразу всю базу тайтлов и ранние серии.</p>
+      <p class="modal-text" id="promoDesc">Вы уже не первый раз заглядываете на витрину! Единая подписка за 100 ₽ открывает сразу всю базу тайтлов и ранние серии.</p>
       <div class="promo-perks" id="promoPerks"></div>
       <div class="modal-actions-col">
-        <a id="promoCtaLink" href="https://boosty.to/wynin/purchase/3908979?ssource=DIRECT&share=subscription_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full" data-ym-event="promo_popup_click">Оформить подписку на Boosty ↗</a>
+        <a id="promoCtaLink" href="https://boosty.to/wynin/purchase/3908979?ssource=DIRECT&share=subscription_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full" data-ym-event="promo_popup_click">Оформить подписку за 100 ₽/мес ↗</a>
         <button type="button" class="btn btn-secondary btn-full" data-close-modal="promoModal">Посмотрю позже</button>
       </div>
     </div>
