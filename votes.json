@@ -1,6 +1,6 @@
 {
   "month": "2026_11",
-  "updated_at": "2026-11-20T04:39:44Z",
+  "updated_at": "2026-11-20T16:29:22Z",
   "namespace": "lirlkz_vitrina_2026_11",
   "total_votes_cast": 0,
   "total_monthly_searches": 0,
@@ -215,16 +215,6 @@
       "tier_level": 1,
       "updated_at": "02/11/2026"
     },
-    "b5b822c4-ca0d-4603-88c3-4b9c9da792de": {
-      "title": "Супер бог зоомагазина",
-      "metric_tag": "super_bog_zoomagazina",
-      "month": "2026_11",
-      "votes": 0,
-      "monthly_searches": 0,
-      "rank": 0,
-      "tier_level": 1,
-      "updated_at": "25/09/2026"
-    },
     "a8029d3b-ffa8-4a74-a76c-ba4401a732c8": {
       "title": "Реинкарнация стримера",
       "metric_tag": "reinkarnaciya_strimera",
@@ -274,11 +264,31 @@
       "rank": 0,
       "tier_level": 1,
       "updated_at": "20/10/2026"
+    },
+    "tag_423068": {
+      "title": "супер бог зоомагазина",
+      "metric_tag": "super_bog_zoomagazina",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "20/11/2026"
+    },
+    "tag_24209921": {
+      "title": "холява",
+      "metric_tag": "holyava",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "20/11/2026"
     }
   },
   "months_archive": {
     "2026_11": {
-      "updated_at": "2026-11-20T04:39:44Z",
+      "updated_at": "2026-11-20T16:29:22Z",
       "total_votes_cast": 0,
       "total_monthly_searches": 0,
       "items": {
@@ -492,16 +502,6 @@
           "tier_level": 1,
           "updated_at": "02/11/2026"
         },
-        "b5b822c4-ca0d-4603-88c3-4b9c9da792de": {
-          "title": "Супер бог зоомагазина",
-          "metric_tag": "super_bog_zoomagazina",
-          "month": "2026_11",
-          "votes": 0,
-          "monthly_searches": 0,
-          "rank": 0,
-          "tier_level": 1,
-          "updated_at": "25/09/2026"
-        },
         "a8029d3b-ffa8-4a74-a76c-ba4401a732c8": {
           "title": "Реинкарнация стримера",
           "metric_tag": "reinkarnaciya_strimera",
@@ -551,6 +551,26 @@
           "rank": 0,
           "tier_level": 1,
           "updated_at": "20/10/2026"
+        },
+        "tag_423068": {
+          "title": "супер бог зоомагазина",
+          "metric_tag": "super_bog_zoomagazina",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "20/11/2026"
+        },
+        "tag_24209921": {
+          "title": "холява",
+          "metric_tag": "holyava",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "20/11/2026"
         }
       }
     }
