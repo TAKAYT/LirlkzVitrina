@@ -154,9 +154,9 @@
   ],
   "ambient_state": {
     "season": "autumn",
-    "is_night": true,
+    "is_night": false,
     "weather": "clear",
     "weather_code": 0,
-    "updated_at": "2026-11-20T01:48:48+03:00"
+    "updated_at": "2026-11-20T07:39:40+03:00"
   }
 }
