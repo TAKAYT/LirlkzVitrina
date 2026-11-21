@@ -2,10 +2,10 @@
   "avatar": "media_cache/avatar.png",
   "subscribers": 65,
   "posts": 42,
-  "total_free_chapters": 318,
+  "total_free_chapters": 303,
   "total_paid_chapters": 73,
-  "total_voiced_chapters": 391,
-  "total_internet_chapters": 391,
+  "total_voiced_chapters": 376,
+  "total_internet_chapters": 376,
   "tiers": [
     {
       "id": "3908979",
@@ -154,9 +154,9 @@
   ],
   "ambient_state": {
     "season": "autumn",
-    "is_night": false,
+    "is_night": true,
     "weather": "clear",
     "weather_code": 0,
-    "updated_at": "2026-11-20T19:29:18+03:00"
+    "updated_at": "2026-11-21T03:59:47+03:00"
   }
 }
