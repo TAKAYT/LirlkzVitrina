@@ -19,7 +19,7 @@
   "goals": [
     {
       "current": 21,
-      "target": 66,
+      "target": 65,
       "type": "money",
       "description": "На новый микрофон 🎙️ для озвучки 🗣"
     },
@@ -49,6 +49,14 @@
     }
   ],
   "tg_news": [
+    {
+      "id": "841",
+      "date": "22.11.2026",
+      "short_text": "Неплохая Броня в игре 👍",
+      "full_text": "Неплохая Броня в игре 👍",
+      "image": "media_cache/tg_841.jpg",
+      "link": "https://t.me/LirlkzManga/841"
+    },
     {
       "id": "840",
       "date": "22.11.2026",
@@ -104,14 +112,6 @@
       "full_text": "Завтра начну для вас выпускать продолжение проектов чтобы пополнять список YouTube, Boost, сайта",
       "image": "media_cache/tg_826.jpg",
       "link": "https://t.me/LirlkzManga/826"
-    },
-    {
-      "id": "825",
-      "date": "17.11.2026",
-      "short_text": "Так всем добрый вечер что могу сказать теперь для вашего удобства при поддержке ТАКИ мы сделали сайт где вы сможете спокойно пр...",
-      "full_text": "Так всем добрый вечер что могу сказать теперь для вашего удобства при поддержке ТАКИ мы сделали сайт где вы сможете спокойно просматривать каталог проектов [https://takayt.github.io/LirlkzVitrina/]",
-      "image": "media_cache/tg_825.jpg",
-      "link": "https://t.me/LirlkzManga/825"
     }
   ],
   "yt_videos": [
@@ -154,9 +154,9 @@
   ],
   "ambient_state": {
     "season": "autumn",
-    "is_night": false,
+    "is_night": true,
     "weather": "clear",
     "weather_code": 0,
-    "updated_at": "2026-11-22T18:45:54+03:00"
+    "updated_at": "2026-11-23T00:23:53+03:00"
   }
 }

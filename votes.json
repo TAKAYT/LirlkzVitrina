@@ -1,6 +1,6 @@
 {
   "month": "2026_11",
-  "updated_at": "2026-11-22T15:46:00Z",
+  "updated_at": "2026-11-22T21:23:59Z",
   "namespace": "lirlkz_vitrina_2026_11",
   "total_votes_cast": 0,
   "total_monthly_searches": 0,
@@ -95,16 +95,6 @@
       "tier_level": 1,
       "updated_at": "24/08/2026"
     },
-    "c75e5ef8-4fc1-4184-9bdb-7c11c5e96664": {
-      "title": "Я прокачиваюсь во сне, убивая зомби",
-      "metric_tag": "ya_prokachivayus_vo_sne_ubivaya_zombi",
-      "month": "2026_11",
-      "votes": 0,
-      "monthly_searches": 0,
-      "rank": 0,
-      "tier_level": 1,
-      "updated_at": "19/09/2026"
-    },
     "354aa374-2261-4ac9-b8ec-0947e585a9c4": {
       "title": "Все мои ученики непобедимые монстры",
       "metric_tag": "vse_moi_ucheniki_nepobedimye_monstry",
@@ -114,6 +104,16 @@
       "rank": 0,
       "tier_level": 1,
       "updated_at": "21/07/2026"
+    },
+    "c75e5ef8-4fc1-4184-9bdb-7c11c5e96664": {
+      "title": "Я прокачиваюсь во сне, убивая зомби",
+      "metric_tag": "ya_prokachivayus_vo_sne_ubivaya_zombi",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "19/09/2026"
     },
     "4c33154e-ab57-4fef-aa80-e9f11d5ddce8": {
       "title": "Лишившись руки, я стал непобедимым",
@@ -185,16 +185,6 @@
       "tier_level": 1,
       "updated_at": "18/07/2026"
     },
-    "b785885f-111a-42e1-acf3-69178da98dee": {
-      "title": "Я регрессировал в 99-й раз",
-      "metric_tag": "ya_regressiroval_v_99_j_raz",
-      "month": "2026_11",
-      "votes": 0,
-      "monthly_searches": 0,
-      "rank": 0,
-      "tier_level": 1,
-      "updated_at": "17/11/2026"
-    },
     "ffc2eeb7-bcca-4262-91f4-be7319215c5c": {
       "title": "Поднятие уровня в одиночку",
       "metric_tag": "podnyatie_urovnya_v_odinochku",
@@ -204,6 +194,16 @@
       "rank": 0,
       "tier_level": 1,
       "updated_at": "19/07/2026"
+    },
+    "b785885f-111a-42e1-acf3-69178da98dee": {
+      "title": "Я регрессировал в 99-й раз",
+      "metric_tag": "ya_regressiroval_v_99_j_raz",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "17/11/2026"
     },
     "1d6ab3f8-f6c7-42a0-b63c-92828c58611d": {
       "title": "Сильнейшая система судьбы",
@@ -278,7 +278,7 @@
   },
   "months_archive": {
     "2026_11": {
-      "updated_at": "2026-11-22T15:46:00Z",
+      "updated_at": "2026-11-22T21:23:59Z",
       "total_votes_cast": 0,
       "total_monthly_searches": 0,
       "items": {
@@ -372,16 +372,6 @@
           "tier_level": 1,
           "updated_at": "24/08/2026"
         },
-        "c75e5ef8-4fc1-4184-9bdb-7c11c5e96664": {
-          "title": "Я прокачиваюсь во сне, убивая зомби",
-          "metric_tag": "ya_prokachivayus_vo_sne_ubivaya_zombi",
-          "month": "2026_11",
-          "votes": 0,
-          "monthly_searches": 0,
-          "rank": 0,
-          "tier_level": 1,
-          "updated_at": "19/09/2026"
-        },
         "354aa374-2261-4ac9-b8ec-0947e585a9c4": {
           "title": "Все мои ученики непобедимые монстры",
           "metric_tag": "vse_moi_ucheniki_nepobedimye_monstry",
@@ -391,6 +381,16 @@
           "rank": 0,
           "tier_level": 1,
           "updated_at": "21/07/2026"
+        },
+        "c75e5ef8-4fc1-4184-9bdb-7c11c5e96664": {
+          "title": "Я прокачиваюсь во сне, убивая зомби",
+          "metric_tag": "ya_prokachivayus_vo_sne_ubivaya_zombi",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "19/09/2026"
         },
         "4c33154e-ab57-4fef-aa80-e9f11d5ddce8": {
           "title": "Лишившись руки, я стал непобедимым",
@@ -462,16 +462,6 @@
           "tier_level": 1,
           "updated_at": "18/07/2026"
         },
-        "b785885f-111a-42e1-acf3-69178da98dee": {
-          "title": "Я регрессировал в 99-й раз",
-          "metric_tag": "ya_regressiroval_v_99_j_raz",
-          "month": "2026_11",
-          "votes": 0,
-          "monthly_searches": 0,
-          "rank": 0,
-          "tier_level": 1,
-          "updated_at": "17/11/2026"
-        },
         "ffc2eeb7-bcca-4262-91f4-be7319215c5c": {
           "title": "Поднятие уровня в одиночку",
           "metric_tag": "podnyatie_urovnya_v_odinochku",
@@ -481,6 +471,16 @@
           "rank": 0,
           "tier_level": 1,
           "updated_at": "19/07/2026"
+        },
+        "b785885f-111a-42e1-acf3-69178da98dee": {
+          "title": "Я регрессировал в 99-й раз",
+          "metric_tag": "ya_regressiroval_v_99_j_raz",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "17/11/2026"
         },
         "1d6ab3f8-f6c7-42a0-b63c-92828c58611d": {
           "title": "Сильнейшая система судьбы",
