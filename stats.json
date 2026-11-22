@@ -10,7 +10,7 @@
     {
       "id": "3908979",
       "tier": 1,
-      "name": "Полный доступ ко всем тайтлам",
+      "name": "❤️‍🔥Любитель озвучки❤️‍🔥",
       "price": 100,
       "old_price": 0,
       "url": "https://boosty.to/wynin/purchase/3908979?ssource=DIRECT&share=subscription_link"
@@ -146,9 +146,9 @@
   ],
   "ambient_state": {
     "season": "autumn",
-    "is_night": true,
+    "is_night": false,
     "weather": "clear",
     "weather_code": 0,
-    "updated_at": "2026-11-22T02:59:29+03:00"
+    "updated_at": "2026-11-22T08:06:07+03:00"
   }
 }
