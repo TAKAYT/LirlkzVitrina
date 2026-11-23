@@ -19,7 +19,7 @@
   "goals": [
     {
       "current": 21,
-      "target": 65,
+      "target": 66,
       "type": "money",
       "description": "На новый микрофон 🎙️ для озвучки 🗣"
     },
@@ -154,9 +154,9 @@
   ],
   "ambient_state": {
     "season": "autumn",
-    "is_night": true,
+    "is_night": false,
     "weather": "clear",
     "weather_code": 0,
-    "updated_at": "2026-11-23T00:23:53+03:00"
+    "updated_at": "2026-11-23T07:25:33+03:00"
   }
 }
