@@ -1,6 +1,6 @@
 {
   "month": "2026_11",
-  "updated_at": "2026-11-23T04:25:39Z",
+  "updated_at": "2026-11-23T19:36:24Z",
   "namespace": "lirlkz_vitrina_2026_11",
   "total_votes_cast": 0,
   "total_monthly_searches": 0,
@@ -75,16 +75,6 @@
       "tier_level": 1,
       "updated_at": "18/11/2026"
     },
-    "153e1604-54d9-418c-a374-fd414ec91dee": {
-      "title": "Некромант с проклятым навыком нежить",
-      "metric_tag": "nekromant_s_proklyatym_navykom_nezhit",
-      "month": "2026_11",
-      "votes": 0,
-      "monthly_searches": 0,
-      "rank": 0,
-      "tier_level": 1,
-      "updated_at": "19/10/2026"
-    },
     "54f169df-fcd1-46cd-a8e9-ce2ca0138c36": {
       "title": "Восхождение безграничного некроманта",
       "metric_tag": "voshozhdenie_bezgranichnogo_nekromanta",
@@ -95,15 +85,15 @@
       "tier_level": 1,
       "updated_at": "24/08/2026"
     },
-    "354aa374-2261-4ac9-b8ec-0947e585a9c4": {
-      "title": "Все мои ученики непобедимые монстры",
-      "metric_tag": "vse_moi_ucheniki_nepobedimye_monstry",
+    "153e1604-54d9-418c-a374-fd414ec91dee": {
+      "title": "Некромант с проклятым навыком нежить",
+      "metric_tag": "nekromant_s_proklyatym_navykom_nezhit",
       "month": "2026_11",
       "votes": 0,
       "monthly_searches": 0,
       "rank": 0,
       "tier_level": 1,
-      "updated_at": "21/07/2026"
+      "updated_at": "19/10/2026"
     },
     "c75e5ef8-4fc1-4184-9bdb-7c11c5e96664": {
       "title": "Я прокачиваюсь во сне, убивая зомби",
@@ -115,15 +105,15 @@
       "tier_level": 1,
       "updated_at": "19/09/2026"
     },
-    "4c33154e-ab57-4fef-aa80-e9f11d5ddce8": {
-      "title": "Лишившись руки, я стал непобедимым",
-      "metric_tag": "lishivshis_ruki_ya_stal_nepobedimym",
+    "354aa374-2261-4ac9-b8ec-0947e585a9c4": {
+      "title": "Все мои ученики непобедимые монстры",
+      "metric_tag": "vse_moi_ucheniki_nepobedimye_monstry",
       "month": "2026_11",
       "votes": 0,
       "monthly_searches": 0,
       "rank": 0,
       "tier_level": 1,
-      "updated_at": "02/09/2026"
+      "updated_at": "21/07/2026"
     },
     "32f41f11-cddc-4c33-9b04-5bdab770094c": {
       "title": "Мой Джун Джун стал королём демонов",
@@ -134,6 +124,16 @@
       "rank": 0,
       "tier_level": 1,
       "updated_at": "27/08/2026"
+    },
+    "4c33154e-ab57-4fef-aa80-e9f11d5ddce8": {
+      "title": "Лишившись руки, я стал непобедимым",
+      "metric_tag": "lishivshis_ruki_ya_stal_nepobedimym",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "02/09/2026"
     },
     "fba21310-f9a1-4df4-8c4f-c0d2b2d83b65": {
       "title": "Абсолютно непроходимое подземелье",
@@ -165,6 +165,16 @@
       "tier_level": 1,
       "updated_at": "10/11/2026"
     },
+    "1b384a69-85fa-4c6c-bead-85eeb0f2a9ce": {
+      "title": "Взгляд на мир боевых искусств",
+      "metric_tag": "vzglyad_na_mir_boevyh_iskusstv",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "22/11/2026"
+    },
     "2f233805-57c2-4b44-a335-42f989b896ef": {
       "title": "Эволюция в бога: пожирая души",
       "metric_tag": "evolyuciya_v_boga_pozhiraya_dushi",
@@ -185,16 +195,6 @@
       "tier_level": 1,
       "updated_at": "18/07/2026"
     },
-    "ffc2eeb7-bcca-4262-91f4-be7319215c5c": {
-      "title": "Поднятие уровня в одиночку",
-      "metric_tag": "podnyatie_urovnya_v_odinochku",
-      "month": "2026_11",
-      "votes": 0,
-      "monthly_searches": 0,
-      "rank": 0,
-      "tier_level": 1,
-      "updated_at": "19/07/2026"
-    },
     "b785885f-111a-42e1-acf3-69178da98dee": {
       "title": "Я регрессировал в 99-й раз",
       "metric_tag": "ya_regressiroval_v_99_j_raz",
@@ -204,6 +204,16 @@
       "rank": 0,
       "tier_level": 1,
       "updated_at": "17/11/2026"
+    },
+    "ffc2eeb7-bcca-4262-91f4-be7319215c5c": {
+      "title": "Поднятие уровня в одиночку",
+      "metric_tag": "podnyatie_urovnya_v_odinochku",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "19/07/2026"
     },
     "1d6ab3f8-f6c7-42a0-b63c-92828c58611d": {
       "title": "Сильнейшая система судьбы",
@@ -274,11 +284,31 @@
       "rank": 0,
       "tier_level": 1,
       "updated_at": "20/10/2026"
+    },
+    "tag_21094430": {
+      "title": "взгляд на цзянху",
+      "metric_tag": "vzglyad_na_czyanhu",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "23/11/2026"
+    },
+    "tag_25887": {
+      "title": "халява",
+      "metric_tag": "halyava",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "23/11/2026"
     }
   },
   "months_archive": {
     "2026_11": {
-      "updated_at": "2026-11-23T04:25:39Z",
+      "updated_at": "2026-11-23T19:36:24Z",
       "total_votes_cast": 0,
       "total_monthly_searches": 0,
       "items": {
@@ -352,16 +382,6 @@
           "tier_level": 1,
           "updated_at": "18/11/2026"
         },
-        "153e1604-54d9-418c-a374-fd414ec91dee": {
-          "title": "Некромант с проклятым навыком нежить",
-          "metric_tag": "nekromant_s_proklyatym_navykom_nezhit",
-          "month": "2026_11",
-          "votes": 0,
-          "monthly_searches": 0,
-          "rank": 0,
-          "tier_level": 1,
-          "updated_at": "19/10/2026"
-        },
         "54f169df-fcd1-46cd-a8e9-ce2ca0138c36": {
           "title": "Восхождение безграничного некроманта",
           "metric_tag": "voshozhdenie_bezgranichnogo_nekromanta",
@@ -372,15 +392,15 @@
           "tier_level": 1,
           "updated_at": "24/08/2026"
         },
-        "354aa374-2261-4ac9-b8ec-0947e585a9c4": {
-          "title": "Все мои ученики непобедимые монстры",
-          "metric_tag": "vse_moi_ucheniki_nepobedimye_monstry",
+        "153e1604-54d9-418c-a374-fd414ec91dee": {
+          "title": "Некромант с проклятым навыком нежить",
+          "metric_tag": "nekromant_s_proklyatym_navykom_nezhit",
           "month": "2026_11",
           "votes": 0,
           "monthly_searches": 0,
           "rank": 0,
           "tier_level": 1,
-          "updated_at": "21/07/2026"
+          "updated_at": "19/10/2026"
         },
         "c75e5ef8-4fc1-4184-9bdb-7c11c5e96664": {
           "title": "Я прокачиваюсь во сне, убивая зомби",
@@ -392,15 +412,15 @@
           "tier_level": 1,
           "updated_at": "19/09/2026"
         },
-        "4c33154e-ab57-4fef-aa80-e9f11d5ddce8": {
-          "title": "Лишившись руки, я стал непобедимым",
-          "metric_tag": "lishivshis_ruki_ya_stal_nepobedimym",
+        "354aa374-2261-4ac9-b8ec-0947e585a9c4": {
+          "title": "Все мои ученики непобедимые монстры",
+          "metric_tag": "vse_moi_ucheniki_nepobedimye_monstry",
           "month": "2026_11",
           "votes": 0,
           "monthly_searches": 0,
           "rank": 0,
           "tier_level": 1,
-          "updated_at": "02/09/2026"
+          "updated_at": "21/07/2026"
         },
         "32f41f11-cddc-4c33-9b04-5bdab770094c": {
           "title": "Мой Джун Джун стал королём демонов",
@@ -411,6 +431,16 @@
           "rank": 0,
           "tier_level": 1,
           "updated_at": "27/08/2026"
+        },
+        "4c33154e-ab57-4fef-aa80-e9f11d5ddce8": {
+          "title": "Лишившись руки, я стал непобедимым",
+          "metric_tag": "lishivshis_ruki_ya_stal_nepobedimym",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "02/09/2026"
         },
         "fba21310-f9a1-4df4-8c4f-c0d2b2d83b65": {
           "title": "Абсолютно непроходимое подземелье",
@@ -442,6 +472,16 @@
           "tier_level": 1,
           "updated_at": "10/11/2026"
         },
+        "1b384a69-85fa-4c6c-bead-85eeb0f2a9ce": {
+          "title": "Взгляд на мир боевых искусств",
+          "metric_tag": "vzglyad_na_mir_boevyh_iskusstv",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "22/11/2026"
+        },
         "2f233805-57c2-4b44-a335-42f989b896ef": {
           "title": "Эволюция в бога: пожирая души",
           "metric_tag": "evolyuciya_v_boga_pozhiraya_dushi",
@@ -462,16 +502,6 @@
           "tier_level": 1,
           "updated_at": "18/07/2026"
         },
-        "ffc2eeb7-bcca-4262-91f4-be7319215c5c": {
-          "title": "Поднятие уровня в одиночку",
-          "metric_tag": "podnyatie_urovnya_v_odinochku",
-          "month": "2026_11",
-          "votes": 0,
-          "monthly_searches": 0,
-          "rank": 0,
-          "tier_level": 1,
-          "updated_at": "19/07/2026"
-        },
         "b785885f-111a-42e1-acf3-69178da98dee": {
           "title": "Я регрессировал в 99-й раз",
           "metric_tag": "ya_regressiroval_v_99_j_raz",
@@ -481,6 +511,16 @@
           "rank": 0,
           "tier_level": 1,
           "updated_at": "17/11/2026"
+        },
+        "ffc2eeb7-bcca-4262-91f4-be7319215c5c": {
+          "title": "Поднятие уровня в одиночку",
+          "metric_tag": "podnyatie_urovnya_v_odinochku",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "19/07/2026"
         },
         "1d6ab3f8-f6c7-42a0-b63c-92828c58611d": {
           "title": "Сильнейшая система судьбы",
@@ -551,6 +591,26 @@
           "rank": 0,
           "tier_level": 1,
           "updated_at": "20/10/2026"
+        },
+        "tag_21094430": {
+          "title": "взгляд на цзянху",
+          "metric_tag": "vzglyad_na_czyanhu",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "23/11/2026"
+        },
+        "tag_25887": {
+          "title": "халява",
+          "metric_tag": "halyava",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "23/11/2026"
         }
       }
     }
