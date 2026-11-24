@@ -1,6 +1,6 @@
 {
   "month": "2026_11",
-  "updated_at": "2026-11-24T04:30:34Z",
+  "updated_at": "2026-11-24T19:11:06Z",
   "namespace": "lirlkz_vitrina_2026_11",
   "total_votes_cast": 0,
   "total_monthly_searches": 0,
@@ -44,6 +44,16 @@
       "rank": 0,
       "tier_level": 1,
       "updated_at": "03/11/2026"
+    },
+    "4dc007d1-3696-4bc5-84c1-9137d984b47a": {
+      "title": "Всеобщий отбор: мечник в самом деле слабейший класс",
+      "metric_tag": "vseobschij_otbor_mechnik_v_samom_dele_slabejshij",
+      "month": "2026_11",
+      "votes": 0,
+      "monthly_searches": 0,
+      "rank": 0,
+      "tier_level": 1,
+      "updated_at": "24/11/2026"
     },
     "db61bc2f-b88c-40a3-8246-b356b7654bf9": {
       "title": "Я уничтожил армии трех тысяч миров одной рукой",
@@ -288,7 +298,7 @@
   },
   "months_archive": {
     "2026_11": {
-      "updated_at": "2026-11-24T04:30:34Z",
+      "updated_at": "2026-11-24T19:11:06Z",
       "total_votes_cast": 0,
       "total_monthly_searches": 0,
       "items": {
@@ -331,6 +341,16 @@
           "rank": 0,
           "tier_level": 1,
           "updated_at": "03/11/2026"
+        },
+        "4dc007d1-3696-4bc5-84c1-9137d984b47a": {
+          "title": "Всеобщий отбор: мечник в самом деле слабейший класс",
+          "metric_tag": "vseobschij_otbor_mechnik_v_samom_dele_slabejshij",
+          "month": "2026_11",
+          "votes": 0,
+          "monthly_searches": 0,
+          "rank": 0,
+          "tier_level": 1,
+          "updated_at": "24/11/2026"
         },
         "db61bc2f-b88c-40a3-8246-b356b7654bf9": {
           "title": "Я уничтожил армии трех тысяч миров одной рукой",

@@ -286,6 +286,76 @@
     "monthly_searches": 0
   },
   {
+    "id": "4dc007d1-3696-4bc5-84c1-9137d984b47a",
+    "metric_tag": "vseobschij_otbor_mechnik_v_samom_dele_slabejshij",
+    "utm_campaign": "vseobschij_otbor_mechnik_v_samom_dele_slabejshij",
+    "vote_key": "v_4dc007d136964bc584c19137d984b47a",
+    "title": "Всеобщий отбор: мечник в самом деле слабейший класс",
+    "image": "media_cache/covers/vseobschij_otbor_mechnik_v_samom_dele_sl_4dc007d1-3696-4bc5-84c1-.jpg",
+    "remote_image": "https://images.boosty.to/image/dc02e812-0f76-419c-bb0e-68ec8b1839dc",
+    "content_type": "manhua",
+    "is_frozen": false,
+    "is_romance": false,
+    "is_completed": false,
+    "hidden_tags": [],
+    "chapters": 10,
+    "internet_chapters": 10,
+    "free_chapters": 10,
+    "paid_chapters": 0,
+    "posts_count": 1,
+    "free_posts_count": 1,
+    "paid_posts_count": 0,
+    "latest_range": "1-10 гл.",
+    "week_range": "1-10 гл.",
+    "week_posts_count": 1,
+    "week_post_image": "media_cache/covers/vseobschij_otbor_mechnik_v_samom_dele_sl_4dc007d1-3696-4bc5-84c1-.jpg",
+    "week_post_link": "https://boosty.to/wynin/posts/f8a5bec8-254a-447b-8166-9d2bf1590dfb?utm_campaign=vseobschij_otbor_mechnik_v_samom_dele_slabejshij",
+    "has_free": true,
+    "free_text": "1-10 гл. бесплатно",
+    "free_posts": [
+      {
+        "post_id": "f8a5bec8-254a-447b-8166-9d2bf1590dfb",
+        "title": "Всеобщий отбор: мечник в самом деле слабейший класс 1-10",
+        "range": "1-10 гл.",
+        "date": "24.11.2026",
+        "link": "https://boosty.to/wynin/posts/f8a5bec8-254a-447b-8166-9d2bf1590dfb?utm_campaign=vseobschij_otbor_mechnik_v_samom_dele_slabejshij"
+      }
+    ],
+    "all_posts": [
+      {
+        "post_id": "f8a5bec8-254a-447b-8166-9d2bf1590dfb",
+        "title": "Всеобщий отбор: мечник в самом деле слабейший класс 1-10",
+        "range": "1-10 гл.",
+        "start_ch": 1,
+        "end_ch": 10,
+        "is_free": true,
+        "tier_level": 1,
+        "ts": 1795523205,
+        "date": "24.11.2026",
+        "image": "https://images.boosty.to/image/52a306a4-9ee5-47e8-81cc-d844353ee458",
+        "link": "https://boosty.to/wynin/posts/f8a5bec8-254a-447b-8166-9d2bf1590dfb?utm_campaign=vseobschij_otbor_mechnik_v_samom_dele_slabejshij"
+      }
+    ],
+    "genres": [
+      "артефакты"
+    ],
+    "last_update": "24/11/2026",
+    "timestamp": 1795523205,
+    "created_ts": 1795515591,
+    "is_1_to_n": true,
+    "tier": "Полный доступ ко всем тайтлам • 100 ₽",
+    "tier_level": 1,
+    "price": 100,
+    "latest_post_id": "f8a5bec8-254a-447b-8166-9d2bf1590dfb",
+    "latest_post_link": "https://boosty.to/wynin/posts/f8a5bec8-254a-447b-8166-9d2bf1590dfb?utm_campaign=vseobschij_otbor_mechnik_v_samom_dele_slabejshij",
+    "free_post_id": "f8a5bec8-254a-447b-8166-9d2bf1590dfb",
+    "free_post_link": "https://boosty.to/wynin/posts/f8a5bec8-254a-447b-8166-9d2bf1590dfb?utm_campaign=vseobschij_otbor_mechnik_v_samom_dele_slabejshij",
+    "sub_link": "https://boosty.to/wynin/purchase/3908979?ssource=DIRECT&share=subscription_link&utm_campaign=vseobschij_otbor_mechnik_v_samom_dele_slabejshij",
+    "link": "https://boosty.to/wynin/bundle/4dc007d1-3696-4bc5-84c1-9137d984b47a?isFromShowcasePreview=true&view=feed&utm_campaign=vseobschij_otbor_mechnik_v_samom_dele_slabejshij",
+    "votes": 0,
+    "monthly_searches": 0
+  },
+  {
     "id": "db61bc2f-b88c-40a3-8246-b356b7654bf9",
     "metric_tag": "ya_unichtozhil_armii_treh_tysyach_mirov_odnoj_ru",
     "utm_campaign": "ya_unichtozhil_armii_treh_tysyach_mirov_odnoj_ru",
