@@ -1,6 +1,6 @@
 {
   "month": "2026_11",
-  "updated_at": "2026-11-23T19:36:24Z",
+  "updated_at": "2026-11-24T04:30:34Z",
   "namespace": "lirlkz_vitrina_2026_11",
   "total_votes_cast": 0,
   "total_monthly_searches": 0,
@@ -173,7 +173,7 @@
       "monthly_searches": 0,
       "rank": 0,
       "tier_level": 1,
-      "updated_at": "22/11/2026"
+      "updated_at": "23/11/2026"
     },
     "2f233805-57c2-4b44-a335-42f989b896ef": {
       "title": "Эволюция в бога: пожирая души",
@@ -284,31 +284,11 @@
       "rank": 0,
       "tier_level": 1,
       "updated_at": "20/10/2026"
-    },
-    "tag_21094430": {
-      "title": "взгляд на цзянху",
-      "metric_tag": "vzglyad_na_czyanhu",
-      "month": "2026_11",
-      "votes": 0,
-      "monthly_searches": 0,
-      "rank": 0,
-      "tier_level": 1,
-      "updated_at": "23/11/2026"
-    },
-    "tag_25887": {
-      "title": "халява",
-      "metric_tag": "halyava",
-      "month": "2026_11",
-      "votes": 0,
-      "monthly_searches": 0,
-      "rank": 0,
-      "tier_level": 1,
-      "updated_at": "23/11/2026"
     }
   },
   "months_archive": {
     "2026_11": {
-      "updated_at": "2026-11-23T19:36:24Z",
+      "updated_at": "2026-11-24T04:30:34Z",
       "total_votes_cast": 0,
       "total_monthly_searches": 0,
       "items": {
@@ -480,7 +460,7 @@
           "monthly_searches": 0,
           "rank": 0,
           "tier_level": 1,
-          "updated_at": "22/11/2026"
+          "updated_at": "23/11/2026"
         },
         "2f233805-57c2-4b44-a335-42f989b896ef": {
           "title": "Эволюция в бога: пожирая души",
@@ -591,26 +571,6 @@
           "rank": 0,
           "tier_level": 1,
           "updated_at": "20/10/2026"
-        },
-        "tag_21094430": {
-          "title": "взгляд на цзянху",
-          "metric_tag": "vzglyad_na_czyanhu",
-          "month": "2026_11",
-          "votes": 0,
-          "monthly_searches": 0,
-          "rank": 0,
-          "tier_level": 1,
-          "updated_at": "23/11/2026"
-        },
-        "tag_25887": {
-          "title": "халява",
-          "metric_tag": "halyava",
-          "month": "2026_11",
-          "votes": 0,
-          "monthly_searches": 0,
-          "rank": 0,
-          "tier_level": 1,
-          "updated_at": "23/11/2026"
         }
       }
     }
