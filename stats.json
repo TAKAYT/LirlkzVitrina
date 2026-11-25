@@ -104,14 +104,6 @@
       "full_text": "Всем салют вечерний сегодня выходит ролик наконец-то на канал через час может меньше уже накале",
       "image": "",
       "link": "https://t.me/LirlkzManga/827"
-    },
-    {
-      "id": "826",
-      "date": "17.11.2026",
-      "short_text": "Завтра начну для вас выпускать продолжение проектов чтобы пополнять список YouTube, Boost, сайта",
-      "full_text": "Завтра начну для вас выпускать продолжение проектов чтобы пополнять список YouTube, Boost, сайта",
-      "image": "media_cache/tg_826.jpg",
-      "link": "https://t.me/LirlkzManga/826"
     }
   ],
   "yt_videos": [
@@ -154,9 +146,9 @@
   ],
   "ambient_state": {
     "season": "autumn",
-    "is_night": true,
+    "is_night": false,
     "weather": "clear",
     "weather_code": 0,
-    "updated_at": "2026-11-24T22:11:01+03:00"
+    "updated_at": "2026-11-25T06:14:44+03:00"
   }
 }
