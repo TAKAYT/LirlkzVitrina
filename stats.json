@@ -18,34 +18,10 @@
   ],
   "goals": [
     {
-      "current": 21,
-      "target": 66,
-      "type": "money",
-      "description": "На новый микрофон 🎙️ для озвучки 🗣"
-    },
-    {
-      "current": 7,
-      "target": 6,
-      "type": "money",
-      "description": "продолжение маньхуа:После разрыва отношений все мои призванные звери стали темными существами"
-    },
-    {
       "current": 0,
-      "target": 46,
-      "type": "money",
-      "description": "На хорошее проведение выходных "
-    },
-    {
-      "current": 0,
-      "target": 6,
-      "type": "money",
-      "description": "После перерождения я использовал зеркальное отражение, чтобы отомстить 1-5\n"
-    },
-    {
-      "current": 4,
-      "target": 50,
+      "target": 100,
       "type": "subscribers",
-      "description": "Давайте постараемся добить к 2027 году 50 подписчиков на Boost вить это будет огромная поддержка с вашей стороны"
+      "description": "Хочу набрать первых 100 платных подписок к 2028 году"
     }
   ],
   "tg_news": [
@@ -146,9 +122,9 @@
   ],
   "ambient_state": {
     "season": "autumn",
-    "is_night": false,
+    "is_night": true,
     "weather": "clear",
     "weather_code": 0,
-    "updated_at": "2026-11-25T16:41:57+03:00"
+    "updated_at": "2026-11-26T02:51:45+03:00"
   }
 }
