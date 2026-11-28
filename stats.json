@@ -48,14 +48,6 @@
       "full_text": "Весь ютуб засран как и тик-ток гта 6 я уже напрасно готов у родных в долг просить чтобы мучения закончить свои дни и так паршивые ещё и это гта 6",
       "image": "media_cache/tg_834.jpg",
       "link": "https://t.me/LirlkzManga/834"
-    },
-    {
-      "id": "832",
-      "date": "20.11.2026",
-      "short_text": "Супер бог зоомагазина главы начиная с первой заканчивая по пятнадцатую уже на YouTube",
-      "full_text": "Супер бог зоомагазина главы начиная с первой заканчивая по пятнадцатую уже на YouTube",
-      "image": "media_cache/tg_832.jpg",
-      "link": "https://t.me/LirlkzManga/832"
     }
   ],
   "yt_videos": [
@@ -98,9 +90,9 @@
   ],
   "ambient_state": {
     "season": "autumn",
-    "is_night": true,
+    "is_night": false,
     "weather": "clear",
     "weather_code": 0,
-    "updated_at": "2026-11-28T02:48:35+03:00"
+    "updated_at": "2026-11-28T08:16:11+03:00"
   }
 }
